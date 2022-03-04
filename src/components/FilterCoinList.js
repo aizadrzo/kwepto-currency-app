@@ -5,6 +5,7 @@ import { ReactSelectStyled } from "../styles/CoinList.styled";
 const FilterCoinList = ({ currency, setCurrency }) => {
   const currencyOptions = [
     { value: "myr", label: "MYR" },
+    // { symbol: "btcusdt", label: "BTC", interval: "1m" },
     { value: "usd", label: "USD" },
     { value: "eur", label: "EUR" },
     { value: "gbp", label: "GBP" },

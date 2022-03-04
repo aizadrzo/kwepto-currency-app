@@ -7,6 +7,7 @@ import CoinPage from "./pages/CoinPage";
 import Exchange from "./pages/Exchange";
 import { AppContainerStyled, MainContainerStyled } from "./styles/Main.styled";
 import Footer from "./components/Footer";
+import LiveGraphPage from "./pages/LiveGraphPage";
 
 const App = () => {
   const [coins, setCoins] = useState([]);
@@ -47,6 +48,7 @@ const App = () => {
           />
           <Route path=":coinid" element={<CoinPage />} />
           <Route path="/exchange" element={<Exchange />} />
+          <Route path="/live" element={<LiveGraphPage />} />
         </Routes>
       </MainContainerStyled>
       <Footer />

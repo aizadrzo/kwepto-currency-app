@@ -28,7 +28,9 @@ const NavBar = () => {
                 <p>News</p>
               </li>
               <li>
-                <p>Watch List</p>
+                <Link to="/live">
+                  <p>Live Tracker</p>
+                </Link>
               </li>
             </ul>
           </NavLinksStyled>
