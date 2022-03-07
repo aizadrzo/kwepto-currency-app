@@ -5,7 +5,6 @@ import "../styles/News.css";
 import { useGetCryptosQuery } from "../services/cryptoApi";
 import { useGetCryptoNewsQuery } from "../services/cryptoNewsApi";
 import { SectionStyled } from "../styles/Main.styled";
-import { BannerImgStyled } from "../styles/Banner.styled";
 import { NewsTextBanner, NewsBannerContainer } from "../styles/Banner.styled";
 import NewsLogo from "../assets/NewsLogo.svg";
 
@@ -31,13 +30,11 @@ const News = ({ simplified }) => {
     <>
       <SectionStyled>
         <NewsBannerContainer>
-          <BannerImgStyled>
-            <img
-              className="news-logo"
-              src={NewsLogo}
-              style={{ height: 400, width: "auto", marginBottom: "30px" }}
-            />
-          </BannerImgStyled>
+          <img
+            className="news-logo"
+            src={NewsLogo}
+            style={{ height: 400, width: "auto", marginBottom: "30px" }}
+          />
           <NewsTextBanner>
             <h1>Crypto News</h1>
             <p>It is always important to be in tune with the latest news.</p>

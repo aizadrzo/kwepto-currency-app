@@ -7,7 +7,7 @@ import {
   TrendingCointainerStyled,
   CardContainerStyled,
 } from "../styles/TrendList.styled";
-import Marquee from "react-easy-marquee";
+import Marquee from "react-fast-marquee";
 import { Link } from "react-router-dom";
 
 const Trending = ({ currency }) => {
