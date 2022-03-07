@@ -1,55 +1,41 @@
 import styled from "styled-components/macro";
 
 // Base Style for App
-export const AppContainerStyled = styled.div`
+export const AppStyled = styled.div`
   display: grid;
   grid-template-rows: auto 1fr auto;
 `;
 
 // Base Style for NavBar
-export const NavContainerStyled = styled.div`
+export const NavStyled = styled.nav`
   grid-row-start: 1;
 `;
 
 // Base style for MainSection
-export const MainContainerStyled = styled.div`
+export const BodyStyled = styled.div`
   grid-row-start: 2;
+  margin-inline: auto;
+  width: 100%;
 `;
 
 // Base style for Footer
-export const FooterContainerStyled = styled.div`
+export const FooterStyled = styled.footer`
   grid-row-start: 3;
+  margin-top: 2em;
 `;
 
 // For headers and big text
 export const HeaderStyled = styled.div`
   text-align: center;
-  width: 100%;
-  margin-bottom: 1em;
+  margin-bottom: 1.5em;
+  line-height: 1.2;
   h1 {
-    font-size: 3em;
-    margin-bottom: 0.1em;
+    font-size: clamp(35px, 5.5vw, 50px);
+    font-weight: 800;
   }
   p {
-    font-size: 1.5em;
-  }
-
-  @media (max-width: 768px) {
-    h1 {
-      font-size: 2em;
-    }
-    p {
-      font-size: 1.2em;
-    }
-  }
-
-  @media (max-width: 375px) {
-    h1 {
-      font-size: 1.5em;
-    }
-    p {
-      font-size: 0.8em;
-    }
+    font-size: clamp(18px, 2.5vw, 25px);
+    font-weight: 400;
   }
 `;
 
@@ -66,40 +52,24 @@ export const LoadingScreenStyled = styled.div`
 
 // Apply card-style background with shadow
 export const CardStyled = styled.div`
-  display: grid;
-  place-items: center;
   padding: 1em;
   border-radius: 25px;
   border: 2.5px solid #484848;
-  width: 100%;
+  width: auto;
   background-color: #fff;
   box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em,
     rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
 `;
 
 // To give center text and items within a component
-export const SectionStyled = styled.div`
-  margin: 0em auto;
-  width: 55vw;
-  min-width: 768px;
-  padding: 1.5em 0em;
-
-  @media (max-width: 768px) {
-    width: 90vw;
-  }
+export const SectionStyled = styled.section`
+  margin-inline: auto;
+  max-width: 1028px;
+  margin-top: 2em;
 `;
 
 // Center Everyhthing
 export const CenterEverythingStyled = styled.div`
   display: grid;
   place-items: center;
-`;
-
-export const WhiteBgStyled = styled.div`
-  background-color: #fff;
-`;
-
-export const GreyBgStyled = styled.div`
-  background-color: #484848;
-  height: 100%;
 `;

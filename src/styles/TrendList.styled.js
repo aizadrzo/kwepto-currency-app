@@ -1,5 +1,43 @@
 import styled from "styled-components/macro";
 
+export const TrendingCointainerStyled = styled.div`
+  background-color: #fff;
+  width: 100%;
+  padding: 1.5em 0em;
+
+  .flex {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .trending-img {
+    width: 30%;
+    min-width: 250px;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .trending-content {
+    width: 70%;
+  }
+
+  @media (max-width: 800px) {
+    .flex {
+      flex-direction: column;
+    }
+    .trending-content {
+      width: 100%;
+      height: 90%;
+    }
+    .trending-img {
+      height: auto;
+    }
+  }
+`;
+
 export const CardContainerStyled = styled.div`
   display: flex;
   padding: 1em 0;
@@ -11,8 +49,11 @@ export const CardContainerStyled = styled.div`
 `;
 
 export const CardStyled = styled.div`
-  width: 15rem;
-  padding: 2em 3em;
+  width: clamp(150px, 12vw, 300px);
+  height: 5rem;
+  min-height: 3.75rem;
+  padding: 1.5em 2.5em;
+  gap: 0.5em;
   background: #ffffff;
   border: 2.5px solid #484848;
   border-radius: 25px;
@@ -24,56 +65,36 @@ export const CardStyled = styled.div`
   box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em,
     rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
 
-  img {
-    margin-right: 0.5em;
-    width: 25px;
-    height: auto;
-    border-radius: 25px;
-  }
-
-  p {
-    padding-left: 0.5em;
-  }
-
-  @media (max-width: 768px) {
+  .coin-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.8em;
     img {
-      width: 18px;
-    }
-    h1 {
-      font-size: 2em;
-    }
-    p {
-      font-size: 1.2em;
+      width: 35px;
+      height: auto;
+      border-radius: 25px;
     }
   }
 
-  @media (max-width: 375px) {
-    padding: 1em 1.5em;
-    h1 {
-      font-size: 1.5em;
-    }
-    p {
-      font-size: 0.8em;
-    }
-  }
-`;
+  .coin-name {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    line-height: 1.5;
 
-export const RowStyled = styled.div`
-  justify-content: center;
-  padding-top: 0.5em;
-  align-items: center;
-  font-size: 1.2rem;
-  place-items: center;
+    strong {
+      font-size: clamp(12px, 1.5vw, 18px);
+    }
 
-  @media (max-width: 768px) {
     p {
-      font-size: 1.2em;
+      font-size: clamp(10px, 1.5vw, 12px);
+      font-weight: 100;
     }
   }
 
-  @media (max-width: 375px) {
-    p {
-      font-size: 0.8em;
-    }
+  .coin-price {
+    margin-top: 0.15em;
+    font-size: clamp(18px, 1.5vw, 20px);
   }
 `;

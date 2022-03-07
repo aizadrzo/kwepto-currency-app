@@ -1,15 +1,15 @@
 import React from "react";
-import { FooterStyled } from "../styles/Footer.styled";
-import { GreyBgStyled, FooterContainerStyled } from "../styles/Main.styled";
-
+import FooterImg from "../assets/FooterImg.svg";
+import { FooterContainerStyled } from "../styles/Footer.styled";
 const Footer = () => {
   return (
     <FooterContainerStyled>
-      <GreyBgStyled>
-        <FooterStyled>
-          <p>© 2022 Kwepto. All rights reserved</p>
-        </FooterStyled>
-      </GreyBgStyled>
+      <div className="footer-img">
+        <img src={FooterImg} alt="Footer" />
+      </div>
+      <div className="footer-txt">
+        <p>© 2022 Kwepto. All rights reserved</p>
+      </div>
     </FooterContainerStyled>
   );
 };

@@ -1,52 +1,83 @@
 import styled from "styled-components/macro";
 import ReactPaginate from "react-paginate";
-import Select from "react-select";
 
-export const ListHeaderStyled = styled.div`
-  border-bottom: solid 2px #dfe6e9;
-  display: grid;
-  grid-template-columns: 0.25fr 1fr repeat(3, 0.5fr) 1fr;
-  align-items: center;
-  text-align: right;
-  width: 50vw;
-  min-width: 768px;
-  padding: 1em;
-
-  .center {
-    place-self: center;
-  }
-
-  .visibility {
-    visibility: visible;
-  }
-
-  @media (max-width: 768px) {
+export const CoinTableStyled = styled.table`
+  font-size: clamp(10px, 1.5vw);
+  width: 100%;
+  min-width: 375px;
+  th,
+  td {
+    padding: 0.5em;
     width: 100%;
-    grid-template-columns: 5%repeat (4, 20%);
-    .visibility {
-      visibility: hidden;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+
+  th {
+    border-bottom: solid 2px #dfe6e9;
+    padding: 1em;
+  }
+
+  tr {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0.5em;
+  }
+
+  tfoot {
+    padding: 1.5em;
+  }
+  tfoot > tr {
+    justify-content: center;
+  }
+
+  tbody > tr {
+    &:hover {
+      background-color: #ecf0f1;
     }
   }
-`;
 
-export const CoinListStyled = styled.div`
-  display: grid;
-  /* grid-template-columns: 10% 25% repeat(3, 15%) 20%; */
-  grid-template-columns: 0.25fr 1fr repeat(3, 0.5fr) 1fr;
-  /* grid-template-columns: 5% repeat(5, 1fr); */
-  align-items: center;
-  text-align: right;
-  width: 50vw;
-  min-width: 768px;
-  height: 4vh;
-  padding: 1em;
-
-  p {
-    color: #000;
+  .rank {
+    width: 10%;
+    display: grid;
+    place-items: center;
   }
 
-  .center {
-    place-self: center;
+  .coin-info {
+    min-width: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.5em;
+
+    img {
+      width: 25px;
+      height: auto;
+      border-radius: 25px;
+    }
+
+    .coin-name {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 0.25em;
+    }
+
+    @media (max-width: 768px) {
+      .coin-name {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0em;
+      }
+    }
+  }
+
+  .percentage {
+    width: 45%;
   }
 
   .bold {
@@ -61,12 +92,52 @@ export const CoinListStyled = styled.div`
     color: #eb4d4b;
   }
 
-  .visibility {
-    visibility: visible;
+  .hide-fs {
+    display: none;
   }
 
-  &:hover {
-    background-color: #ecf0f1;
+  strong {
+    font-size: clamp(12px, 1vw, 15px);
+  }
+
+  p {
+    font-size: clamp(10px, 1vw, 12px);
+  }
+
+  @media (max-width: 600px) {
+    th {
+      justify-content: flex-start;
+    }
+    .visible {
+      display: none;
+    }
+
+    .hide-mobile {
+      display: none;
+    }
+
+    .hide-fs {
+      display: block;
+    }
+  }
+`;
+
+export const ListHeaderStyled = styled.div`
+  border-bottom: solid 2px #dfe6e9;
+  display: grid;
+  grid-template-columns: 0.25fr 1fr repeat(3, 0.5fr) 1fr;
+  align-items: center;
+  text-align: right;
+  width: 100%;
+  min-width: 768px;
+  padding: 1em;
+
+  .center {
+    place-self: center;
+  }
+
+  .visibility {
+    visibility: visible;
   }
 
   @media (max-width: 768px) {
@@ -76,50 +147,6 @@ export const CoinListStyled = styled.div`
       visibility: hidden;
     }
   }
-`;
-
-export const CoinInfoStyled = styled.div`
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-self: start;
-  text-align: start;
-  img {
-    width: 18px;
-    height: auto;
-    border-radius: 12.5px;
-  }
-  p {
-    color: #636e72;
-  }
-
-  strong {
-    padding: 0rem 0.5rem;
-  }
-`;
-
-export const FilterCoinListButtonStyled = styled.button`
-  padding: 0.5em 1.5em;
-  margin-right: 0.5em;
-  background-color: #484848;
-  border-radius: 25px;
-
-  span {
-    color: #fff;
-  }
-`;
-
-export const CurrenctDropdownStyled = styled.select`
-  display: grid;
-  place-items: center;
-  border: 2.5px solid #484848;
-  border-radius: 25px;
-  padding: 0.5em;
-`;
-
-export const ReactSelectStyled = styled(Select)`
-  width: 15%;
-  text-align: center;
 `;
 
 export const PageNumberStyled = styled(ReactPaginate)`

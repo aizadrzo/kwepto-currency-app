@@ -1,10 +1,18 @@
 import React from "react";
 
-const SearchCoins = () => {
+const SearchCoins = ({ setSearch }) => {
+  let clearChange = (e) => {
+    setSearch("");
+  };
+  let handleChange = (e) => {
+    setSearch(e.target.value);
+    clearChange();
+  };
+
   return (
-    <div>
-      <input type="search" />
-    </div>
+    <form>
+      <input type="text" placeholder="search coins" onChange={handleChange} />
+    </form>
   );
 };
 

@@ -75,6 +75,7 @@ function Exchange() {
             value={isInitialCrypto ? selectedCrypto : selectedFiat}
           />
           <img
+            className="swap-img"
             src={require("../assets/swap_3.png")}
             alt="swap"
             onClick={() => setIsInitialCrypto(!isInitialCrypto)}

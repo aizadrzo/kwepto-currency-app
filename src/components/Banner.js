@@ -1,23 +1,19 @@
 import React from "react";
+import BannerImg from "../assets/BannerImg.svg";
 import { SectionStyled } from "../styles/Main.styled";
-import {
-  BannerContainer,
-  BannerImgStyled,
-  BannerTextStyled,
-} from "../styles/Banner.styled";
-import IconBanner from "../iconComponents/IconBanner";
+import { BannerContainer } from "../styles/Banner.styled";
 
 const Banner = () => {
   return (
     <SectionStyled>
       <BannerContainer>
-        <BannerTextStyled>
+        <div className="banner-txt">
           <h1>KWEPTO</h1>
           <p>ALL YOUR COINS UNDER ONE ROOF</p>
-        </BannerTextStyled>
-        <BannerImgStyled>
-          <IconBanner style={{ height: 500, width: "auto" }} />
-        </BannerImgStyled>
+        </div>
+        <div className="banner-img">
+          <img src={BannerImg} alt="banner" />
+        </div>
       </BannerContainer>
     </SectionStyled>
   );
