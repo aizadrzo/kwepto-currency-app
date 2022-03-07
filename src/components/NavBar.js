@@ -17,40 +17,6 @@ const NavBar = ({ data, currency, setCurrency }) => {
   };
   return (
     <NavContainerStyled>
-<<<<<<< HEAD
-      <NavStyled>
-        <SectionStyled>
-          <NavLinksStyled>
-            <ul>
-              <li className="logo">
-                <IconLogo />
-              </li>
-              <li>
-                <Link to="/">
-                  <p>Currencies</p>
-                </Link>
-              </li>
-              <li>
-                <Link to="/exchange">
-                  <p>Exchanges</p>
-                </Link>
-              </li>
-              <li>
-                <p>News</p>
-              </li>
-              <li>
-                <Link to="/live">
-                  <p>Live Tracker</p>
-                </Link>
-              </li>
-            </ul>
-          </NavLinksStyled>
-        </SectionStyled>
-      </NavStyled>
-      <NavStyled orange>
-        <NavLinksStyled center>
-          <SectionStyled>
-=======
       <NavLinksStyled>
         <div className="logo">
           <img src={Logo} alt="kwepto" />
@@ -65,6 +31,9 @@ const NavBar = ({ data, currency, setCurrency }) => {
           <Link to="/news">
             <li>News</li>
           </Link>
+          <Link to="/live">
+            <li>Live Graph</li>
+          </Link>
           <li>Watch List</li>
           <div className="end">
             <FilterCoinList currency={currency} setCurrency={setCurrency} />
@@ -75,7 +44,6 @@ const NavBar = ({ data, currency, setCurrency }) => {
             <GiHamburgerMenu onClick={toggleNav} />
           </button>
           {toggleMenu && (
->>>>>>> a33e19eacc40d52f1cf969c803b2c030e7803edc
             <ul>
               <Link to="/">
                 <li>Currencies</li>

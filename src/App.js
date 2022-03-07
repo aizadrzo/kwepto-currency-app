@@ -12,11 +12,8 @@ import PriceTracker from "./pages/PriceTracker";
 import CoinPage from "./pages/CoinPage";
 import Exchange from "./pages/Exchange";
 import Footer from "./components/Footer";
-<<<<<<< HEAD
 import LiveGraphPage from "./pages/LiveGraphPage";
-=======
 import News from "./pages/News";
->>>>>>> a33e19eacc40d52f1cf969c803b2c030e7803edc
 
 const App = () => {
   const [coins, setCoins] = useState([]);
@@ -69,11 +66,8 @@ const App = () => {
           />
           <Route path=":coinid" element={<CoinPage />} />
           <Route path="/exchange" element={<Exchange />} />
-<<<<<<< HEAD
           <Route path="/live" element={<LiveGraphPage />} />
-=======
           <Route path="/news" element={<News />} />
->>>>>>> a33e19eacc40d52f1cf969c803b2c030e7803edc
         </Routes>
       </BodyStyled>
       <FooterStyled>
