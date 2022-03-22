@@ -69,35 +69,3 @@ export const BannerContainer = styled.div`
     }
   }
 `;
-
-export const Button = styled.button`
-  border-radius: 25px;
-  background: #f7a528;
-  padding: ${({ big }) => (big ? "3em 3.5em" : ".5em 1.5em")};
-  color: #fff;
-  font-size: 40px;
-  margin-top: 20px;
-
-  transition: all 0.2s ease-in-out;
-
-  p {
-    font-size: 20px;
-    font-weight: 500;
-    color: #fff;
-  }
-
-  &:hover {
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
-  }
-`;
-
-export const ArrowForward = styled(MdArrowForward)`
-  margin-left: 8px;
-  font-size: 20px;
-`;
-
-export const ArrowRight = styled(MdKeyboardArrowRight)`
-  margin-left: 8px;
-  font-size: 20px;
-`;

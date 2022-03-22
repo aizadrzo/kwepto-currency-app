@@ -27,6 +27,7 @@
     "react-select": "^5.2.2",
     "react-sparklines": "^1.7.0",
     "react-tsparticles": "^1.42.2",
+    "react-usestateref": "^1.0.8",
     "styled-components": "^5.3.3",
     "web-vitals": "^2.1.4",
     "ws": "^8.5.0"
