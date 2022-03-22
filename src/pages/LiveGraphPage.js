@@ -73,6 +73,7 @@ const LiveGraphPage = () => {
   return (
     <SectionStyled>
       <LiveContainerStyled>
+        <h1>Price:$ {price.slice(-1)}</h1>
         <GraphContainerStyled>
           <Line data={data} options={options} />
         </GraphContainerStyled>
